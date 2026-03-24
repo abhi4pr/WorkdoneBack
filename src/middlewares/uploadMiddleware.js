@@ -3,8 +3,8 @@ import ImageKit from "imagekit";
 import multer from "multer";
 
 const imagekit = new ImageKit({
-  publicKey: "public_qYuolJA4BfGTVRpzZQI9vmASoHI=",
-  privateKey: "private_IrT2+aP+QFm14XkU11w+tFWU8Qc=",
+  publicKey: "public_LTo4gUnjDT0CsZ8HAuNMV1i8Fc4=",
+  privateKey: "private_v5fAXg/xyHpkO9c2v6Asp8zoypo=",
   urlEndpoint: "https://ik.imagekit.io/pl6m9mvyb",
 });
 

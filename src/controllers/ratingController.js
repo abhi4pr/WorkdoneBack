@@ -2,15 +2,15 @@ import Rating from "../models/Rating.js";
 
 export const createRating = async (req, res) => {
   try {
-    const { for_user, by_user, rating, review } = req.body;
+    const { for_user, customer, rating, review } = req.body;
 
-    if (!for_user || !by_user || !rating) {
+    if (!for_user || !customer || !rating) {
       return res.status(400).json({
-        message: "for_user, by_user and rating are required",
+        message: "for_user, customer and rating are required",
       });
     }
 
-    if (for_user === by_user) {
+    if (for_user === customer) {
       return res.status(400).json({
         message: "You cannot rate yourself",
       });
@@ -19,7 +19,7 @@ export const createRating = async (req, res) => {
     // Optional: prevent duplicate rating (one user -> one rating)
     const existingRating = await Rating.findOne({
       for_user,
-      by_user,
+      customer,
     });
 
     if (existingRating) {
@@ -30,7 +30,7 @@ export const createRating = async (req, res) => {
 
     const newRating = await Rating.create({
       for_user,
-      by_user,
+      customer,
       rating,
       review,
     });
@@ -49,10 +49,10 @@ export const createRating = async (req, res) => {
 
 export const getRatingsForUser = async (req, res) => {
   try {
-    const userId = req.params.userid;
+    const userId = req.params.providerId;
 
-    const ratings = await Rating.find({ for_user: userId })
-      .populate("by_user", "name surname profile_pic")
+    const ratings = await Rating.find({ provider: userId })
+      .populate("customer", "name surname profile_pic")
       .sort({ createdAt: -1 });
 
     return res.status(200).json({
@@ -69,7 +69,7 @@ export const getRatingsForUser = async (req, res) => {
 
 export const getAverageRating = async (req, res) => {
   try {
-    const userId = req.params.userid;
+    const userId = req.params.providerId;
 
     const result = await Rating.aggregate([
       { $match: { for_user: new mongoose.Types.ObjectId(userId) } },

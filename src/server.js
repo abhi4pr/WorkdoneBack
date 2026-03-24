@@ -4,6 +4,9 @@ import helmet from "helmet";
 import rateLimit from "express-rate-limit";
 import mongoose from "mongoose";
 import authRoutes from "./routes/auth.js";
+import doneworkRoutes from "./routes/donework.js";
+import ratingRoutes from "./routes/rating.js";
+import serviceRoutes from "./routes/service.js";
 import userRoutes from "./routes/user.js";
 import dotenv from "dotenv";
 dotenv.config();
@@ -25,7 +28,10 @@ app.use(
 
 // Routes
 app.use("/api/auth", authRoutes);
-app.use("/api/users", userRoutes);
+app.use("/api/user", userRoutes);
+app.use("/api/donework", doneworkRoutes);
+app.use("/api/rating", ratingRoutes);
+app.use("/api/service", serviceRoutes);
 
 // to check if api's running or not
 app.get("/api", (req, res) => {
