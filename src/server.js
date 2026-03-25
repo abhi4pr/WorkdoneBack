@@ -1,7 +1,6 @@
 import express from "express";
 import cors from "cors";
 import helmet from "helmet";
-import rateLimit from "express-rate-limit";
 import mongoose from "mongoose";
 import authRoutes from "./routes/auth.js";
 import doneworkRoutes from "./routes/donework.js";
@@ -18,13 +17,6 @@ app.use(cors());
 app.use(helmet());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
-app.use(
-  rateLimit({
-    windowMs: 59 * 60 * 1000,
-    max: 50,
-  }),
-);
 
 // Routes
 app.use("/api/auth", authRoutes);

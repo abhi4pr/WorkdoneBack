@@ -6,6 +6,7 @@ import {
   verifyEmail,
   resetPassword,
 } from "../controllers/authController.js";
+import { rateLimiter } from "../middlewares/ratelimitMiddleware.js";
 
 const router = express.Router();
 
