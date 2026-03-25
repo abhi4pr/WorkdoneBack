@@ -5,12 +5,12 @@ import sendEmail from "../utils/sendEmail.js";
 
 export const signup = async (req, res) => {
   try {
-    const { name, email, password, phone } = req.body;
+    const { name, email, password, phone, role } = req.body;
 
-    if (!name || !email || !password) {
+    if (!name || !email || !password || !role) {
       return res
         .status(400)
-        .json({ message: "Name, email and password are required" });
+        .json({ message: "Name, email, role and password are required" });
     }
 
     const existingUser = await User.findOne({ email });
@@ -24,6 +24,7 @@ export const signup = async (req, res) => {
       name,
       email,
       password: hashedPassword,
+      role,
       phone,
       verified: false,
     });
@@ -226,11 +227,9 @@ export const resetPassword = async (req, res) => {
         "Password reset successful. You can now log in with your new password.",
     });
   } catch (error) {
-    return res
-      .status(500)
-      .json({
-        message: "Server error during password reset",
-        error: error.message,
-      });
+    return res.status(500).json({
+      message: "Server error during password reset",
+      error: error.message,
+    });
   }
 };
