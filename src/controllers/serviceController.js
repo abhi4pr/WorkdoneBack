@@ -109,6 +109,7 @@ export const updateService = async (req, res) => {
     if (bodyData.description !== undefined)
       updates.description = bodyData.description;
     if (bodyData.duration !== undefined) updates.duration = bodyData.duration;
+    if (bodyData.status !== undefined) updates.status = bodyData.status;
 
     const updatedService = await Service.findByIdAndUpdate(
       serviceId,
