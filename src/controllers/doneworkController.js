@@ -59,7 +59,7 @@ export const getProviderWorks = async (req, res) => {
     const works = await Donework.find({ provider: providerId })
       .populate("service")
       .populate("customer", "name email")
-      .populate("Rating")
+      .populate("rewrating")
       .sort({ createdAt: -1 });
 
     return res.status(200).json({
