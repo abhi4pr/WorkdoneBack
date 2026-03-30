@@ -28,10 +28,16 @@ const doneworkSchema = new mongoose.Schema(
     },
     completed_at: {
       type: Date,
+      default: null,
     },
     notes: {
       type: String,
       trim: true,
+    },
+    rewrating: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Rating",
+      required: false,
     },
   },
   { timestamps: true },

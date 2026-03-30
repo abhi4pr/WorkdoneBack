@@ -32,11 +32,12 @@ export const createDonework = async (req, res) => {
 
 export const getCustomerWorks = async (req, res) => {
   try {
-    const customerId = req.params.customerId;
+    const customerId = req.params.customerid;
 
     const works = await Donework.find({ customer: customerId })
       .populate("service")
       .populate("provider", "name email")
+      .populate("Rating")
       .sort({ createdAt: -1 });
 
     return res.status(200).json({
@@ -53,11 +54,12 @@ export const getCustomerWorks = async (req, res) => {
 
 export const getProviderWorks = async (req, res) => {
   try {
-    const providerId = req.params.providerId;
+    const providerId = req.params.providerid;
 
     const works = await Donework.find({ provider: providerId })
       .populate("service")
       .populate("customer", "name email")
+      .populate("Rating")
       .sort({ createdAt: -1 });
 
     return res.status(200).json({
