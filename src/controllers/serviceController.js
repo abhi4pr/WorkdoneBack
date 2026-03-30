@@ -34,7 +34,7 @@ export const createService = async (req, res) => {
 
 export const getAllServices = async (req, res) => {
   try {
-    const services = await Service.find({ status: true })
+    const services = await Service.find({ deleted: false })
       .populate("created_by", "name surname profile_pic")
       .sort({ createdAt: -1 });
 
@@ -81,7 +81,7 @@ export const getServicesByUser = async (req, res) => {
 
     const services = await Service.find({
       created_by: userId,
-      status: true,
+      deleted: false,
     }).sort({ createdAt: -1 });
 
     return res.status(200).json({
@@ -139,7 +139,7 @@ export const deleteService = async (req, res) => {
   try {
     const service = await Service.findByIdAndUpdate(
       req.params._id,
-      { $set: { status: false } },
+      { $set: { deleted: true } },
       { new: true },
     );
 

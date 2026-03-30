@@ -39,6 +39,11 @@ const serviceSchema = new mongoose.Schema(
       required: true,
       default: true,
     },
+    deleted: {
+      type: Boolean,
+      required: false,
+      default: false,
+    },
   },
   { timestamps: true },
 );
