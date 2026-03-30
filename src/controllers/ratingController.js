@@ -1,16 +1,18 @@
 import Rating from "../models/Rating.js";
+import Donework from "../models/Donework.js";
 
 export const createRating = async (req, res) => {
   try {
-    const { for_user, customer, rating, review } = req.body;
+    const { provider, customer, service, rating, review, workdoneId } =
+      req.body;
 
-    if (!for_user || !customer || !rating) {
+    if (!provider || !customer || !rating) {
       return res.status(400).json({
-        message: "for_user, customer and rating are required",
+        message: "provider, customer and rating are required",
       });
     }
 
-    if (for_user === customer) {
+    if (provider === customer) {
       return res.status(400).json({
         message: "You cannot rate yourself",
       });
@@ -18,8 +20,9 @@ export const createRating = async (req, res) => {
 
     // Optional: prevent duplicate rating (one user -> one rating)
     const existingRating = await Rating.findOne({
-      for_user,
+      provider,
       customer,
+      service,
     });
 
     if (existingRating) {
@@ -29,11 +32,20 @@ export const createRating = async (req, res) => {
     }
 
     const newRating = await Rating.create({
-      for_user,
+      provider,
       customer,
+      service,
       rating,
       review,
     });
+
+    if (workdoneId) {
+      await Donework.findByIdAndUpdate(
+        workdoneId,
+        { rewrating: newRating._id },
+        { new: true },
+      );
+    }
 
     return res.status(201).json({
       message: "Rating created successfully",
@@ -72,10 +84,10 @@ export const getAverageRating = async (req, res) => {
     const userId = req.params.providerId;
 
     const result = await Rating.aggregate([
-      { $match: { for_user: new mongoose.Types.ObjectId(userId) } },
+      { $match: { provider: new mongoose.Types.ObjectId(userId) } },
       {
         $group: {
-          _id: "$for_user",
+          _id: "$provider",
           averageRating: { $avg: "$rating" },
           totalRatings: { $sum: 1 },
         },
