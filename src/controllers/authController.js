@@ -7,8 +7,6 @@ export const signup = async (req, res) => {
   try {
     const { name, email, password, phone, role } = req.body;
 
-    console.log("body", req.body);
-
     if (!name || !email || !password || !role) {
       return res
         .status(400)
@@ -22,8 +20,6 @@ export const signup = async (req, res) => {
 
     const hashedPassword = await argon2.hash(password);
 
-    console.log("hashed password", hashedPassword);
-
     const user = new User({
       name,
       email,
@@ -33,19 +29,13 @@ export const signup = async (req, res) => {
       verified: false,
     });
 
-    console.log("userobj", user);
-
     await user.save();
 
     const verifyToken = jwt.sign({ id: user._id }, process.env.JWT_SECRET, {
       expiresIn: "1d",
     });
 
-    console.log("verifytoken", verifyToken);
-
-    const verifyLink = `${process.env.FRONTEND_URL}/verifyemail.html?token=${verifyToken}`;
-
-    console.log("verifylink", verifyLink);
+    const verifyLink = `${process.env.FRONTEND_URL}/emailverification.html?token=${verifyToken}`;
 
     const html = `
       <p>Hello ${user.name},</p>
@@ -55,15 +45,11 @@ export const signup = async (req, res) => {
       <p>If you did not sign up, please ignore this email.</p>
     `;
 
-    console.log("STEP 9: sending email");
-
     await sendEmail({
       to: user.email,
       subject: "Verify your email address",
       html,
     });
-
-    console.log("STEP 10: email sent");
 
     return res.status(201).json({
       message:
@@ -187,7 +173,7 @@ export const forgotPassword = async (req, res) => {
       expiresIn: "15m",
     });
 
-    const resetLink = `${process.env.FRONTEND_URL}/reset-password?token=${resetToken}`;
+    const resetLink = `${process.env.FRONTEND_URL}/passwordreset?token=${resetToken}`;
 
     const html = `
       <p>Hello ${user.name},</p>
