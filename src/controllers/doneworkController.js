@@ -55,8 +55,15 @@ export const getCustomerWorks = async (req, res) => {
 export const getProviderWorks = async (req, res) => {
   try {
     const providerId = req.params.providerid;
+    const { status } = req.query;
 
-    const works = await Donework.find({ provider: providerId })
+    const query = { provider: providerId };
+
+    if (status) {
+      query.status = status;
+    }
+
+    const works = await Donework.find(query)
       .populate("service")
       .populate("customer", "name email")
       .populate("rewrating")
@@ -69,6 +76,34 @@ export const getProviderWorks = async (req, res) => {
   } catch (error) {
     return res.status(500).json({
       message: "Failed to fetch provider works",
+      error: error.message,
+    });
+  }
+};
+
+export const getWorkDetailsById = async (req, res) => {
+  try {
+    const workId = req.params._id;
+
+    const work = await Donework.findById(workId)
+      .populate("service")
+      .populate("customer", "name email")
+      .populate("provider", "name email")
+      .populate("rewrating");
+
+    if (!work) {
+      return res.status(404).json({
+        message: "Work not found",
+      });
+    }
+
+    return res.status(200).json({
+      message: "Work fetched successfully",
+      work,
+    });
+  } catch (error) {
+    return res.status(500).json({
+      message: "Failed to fetch work",
       error: error.message,
     });
   }

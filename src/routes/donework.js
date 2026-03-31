@@ -3,6 +3,7 @@ import {
   createDonework,
   getCustomerWorks,
   getProviderWorks,
+  getWorkDetailsById,
   updateWorkStatus,
   updateWorkDetails,
 } from "../controllers/doneworkController.js";
@@ -13,6 +14,7 @@ const router = express.Router();
 router.post("/create_work", authMiddleware, createDonework);
 router.get("/get_customer_works/:customerid", authMiddleware, getCustomerWorks);
 router.get("/get_provider_works/:providerid", authMiddleware, getProviderWorks);
+router.get("/get_workdetails/:_id", authMiddleware, getWorkDetailsById);
 router.put("/update_status/:_id", authMiddleware, updateWorkStatus);
 router.put("/update_note/:_id", authMiddleware, updateWorkDetails);
 
