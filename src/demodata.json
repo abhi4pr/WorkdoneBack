@@ -1,0 +1,733 @@
+{
+
+  "categories": [
+
+    {
+
+      "category": "Home Services",
+
+      "services": [
+
+        "Plumbing",
+
+        "Emergency Plumber",
+
+        "Electrician",
+
+        "HVAC Installation",
+
+        "HVAC Repair",
+
+        "AC Repair",
+
+        "Heater Repair",
+
+        "Carpentry",
+
+        "Furniture Assembly",
+
+        "Cabinet Installation",
+
+        "Painting",
+
+        "Interior Painting",
+
+        "Exterior Painting",
+
+        "Roofing",
+
+        "Roof Repair",
+
+        "Roof Replacement",
+
+        "Flooring",
+
+        "Tile Installation",
+
+        "Hardwood Floor Refinishing",
+
+        "Landscaping",
+
+        "Lawn Mowing",
+
+        "Tree Trimming",
+
+        "Garden Design",
+
+        "House Cleaning",
+
+        "Deep Cleaning",
+
+        "Move-in/Move-out Cleaning",
+
+        "Window Cleaning",
+
+        "Pest Control",
+
+        "Termite Treatment",
+
+        "Bed Bug Extermination",
+
+        "Appliance Repair",
+
+        "Refrigerator Repair",
+
+        "Washer/Dryer Repair",
+
+        "Locksmith",
+
+        "Smart Lock Installation",
+
+        "Emergency Lockout",
+
+        "Handyman Services",
+
+        "Drywall Repair",
+
+        "Gutter Cleaning",
+
+        "Pressure Washing",
+
+        "Pool Cleaning",
+
+        "Garage Door Repair",
+
+        "Solar Panel Installation",
+
+        "Home Theater Installation",
+
+        "Smart Home Setup"
+
+      ]
+
+    },
+
+    {
+
+      "category": "Health & Wellness",
+
+      "services": [
+
+        "Personal Trainer",
+
+        "Yoga Instructor",
+
+        "Pilates Instructor",
+
+        "Massage Therapist",
+
+        "Deep Tissue Massage",
+
+        "Sports Massage",
+
+        "Nutritionist",
+
+        "Dietitian",
+
+        "Mental Health Counselor",
+
+        "Therapist",
+
+        "Life Coach",
+
+        "Acupuncture",
+
+        "Chiropractor",
+
+        "Physical Therapist",
+
+        "Meditation Instructor",
+
+        "Holistic Health Coach"
+
+      ]
+
+    },
+
+    {
+
+      "category": "Beauty & Grooming",
+
+      "services": [
+
+        "Hair Stylist",
+
+        "Haircut",
+
+        "Hair Coloring",
+
+        "Barber",
+
+        "Makeup Artist",
+
+        "Bridal Makeup",
+
+        "Nail Technician",
+
+        "Manicure",
+
+        "Pedicure",
+
+        "Esthetician",
+
+        "Facial",
+
+        "Waxing",
+
+        "Lash Extensions",
+
+        "Microblading",
+
+        "Tattoo Artist",
+
+        "Piercing",
+
+        "Spa Services",
+
+        "Tanning"
+
+      ]
+
+    },
+
+    {
+
+      "category": "Technology & IT",
+
+      "services": [
+
+        "Web Developer",
+
+        "Frontend Developer",
+
+        "Backend Developer",
+
+        "Full Stack Developer",
+
+        "Mobile App Developer",
+
+        "iOS Developer",
+
+        "Android Developer",
+
+        "IT Support",
+
+        "Computer Repair",
+
+        "Network Setup",
+
+        "Data Recovery",
+
+        "Cybersecurity Specialist",
+
+        "Cloud Consultant",
+
+        "AWS Specialist",
+
+        "Database Administrator",
+
+        "DevOps Engineer",
+
+        "AI/ML Consultant",
+
+        "WordPress Developer",
+
+        "E-commerce Developer",
+
+        "CRM Specialist"
+
+      ]
+
+    },
+
+    {
+
+      "category": "Creative & Design",
+
+      "services": [
+
+        "Graphic Designer",
+
+        "Logo Designer",
+
+        "Branding Specialist",
+
+        "UI/UX Designer",
+
+        "Web Designer",
+
+        "Photographer",
+
+        "Wedding Photographer",
+
+        "Portrait Photographer",
+
+        "Product Photographer",
+
+        "Videographer",
+
+        "Video Editor",
+
+        "Animator",
+
+        "3D Modeler",
+
+        "Illustrator",
+
+        "Interior Designer",
+
+        "Architectural Designer",
+
+        "Fashion Designer"
+
+      ]
+
+    },
+
+    {
+
+      "category": "Marketing & Advertising",
+
+      "services": [
+
+        "SEO Specialist",
+
+        "Social Media Manager",
+
+        "Content Writer",
+
+        "Copywriter",
+
+        "PPC Specialist",
+
+        "Google Ads Expert",
+
+        "Facebook Ads Manager",
+
+        "Email Marketing Specialist",
+
+        "Marketing Consultant",
+
+        "Brand Strategist",
+
+        "Publicist",
+
+        "Influencer Marketing Manager",
+
+        "Video Marketing Specialist"
+
+      ]
+
+    },
+
+    {
+
+      "category": "Events & Hospitality",
+
+      "services": [
+
+        "Event Planner",
+
+        "Wedding Planner",
+
+        "Corporate Event Planner",
+
+        "Caterer",
+
+        "Bartender",
+
+        "DJ",
+
+        "Wedding DJ",
+
+        "Live Musician",
+
+        "Photobooth Rental",
+
+        "Party Rental",
+
+        "Tent Rental",
+
+        "Florist",
+
+        "Wedding Florist",
+
+        "Event Decorator",
+
+        "Balloon Artist",
+
+        "Magician",
+
+        "Children's Entertainer"
+
+      ]
+
+    },
+
+    {
+
+      "category": "Professional Services",
+
+      "services": [
+
+        "Business Consultant",
+
+        "Management Consultant",
+
+        "HR Consultant",
+
+        "Recruiter",
+
+        "Accountant",
+
+        "CPA",
+
+        "Bookkeeper",
+
+        "Tax Preparer",
+
+        "Financial Advisor",
+
+        "Wealth Manager",
+
+        "Insurance Agent",
+
+        "Real Estate Agent",
+
+        "Property Manager",
+
+        "Legal Consultant",
+
+        "Immigration Lawyer",
+
+        "Family Lawyer",
+
+        "Corporate Lawyer",
+
+        "Patent Attorney",
+
+        "Notary Public",
+
+        "Virtual Assistant"
+
+      ]
+
+    },
+
+    {
+
+      "category": "Education & Tutoring",
+
+      "services": [
+
+        "Math Tutor",
+
+        "Science Tutor",
+
+        "English Tutor",
+
+        "Test Prep Tutor",
+
+        "SAT Prep",
+
+        "ACT Prep",
+
+        "Language Instructor",
+
+        "Spanish Teacher",
+
+        "French Teacher",
+
+        "ESL Teacher",
+
+        "Music Teacher",
+
+        "Piano Teacher",
+
+        "Guitar Teacher",
+
+        "Violin Teacher",
+
+        "Art Teacher",
+
+        "Dance Instructor",
+
+        "Coding Instructor",
+
+        "College Counselor"
+
+      ]
+
+    },
+
+    {
+
+      "category": "Pet Services",
+
+      "services": [
+
+        "Dog Walker",
+
+        "Pet Sitter",
+
+        "Dog Trainer",
+
+        "Pet Groomer",
+
+        "Mobile Pet Grooming",
+
+        "Veterinarian",
+
+        "Mobile Vet",
+
+        "Pet Boarding",
+
+        "Pet Taxi",
+
+        "Animal Behaviorist"
+
+      ]
+
+    },
+
+    {
+
+      "category": "Automotive",
+
+      "services": [
+
+        "Auto Mechanic",
+
+        "Oil Change",
+
+        "Brake Repair",
+
+        "Engine Repair",
+
+        "Transmission Repair",
+
+        "Auto Body Shop",
+
+        "Paintless Dent Repair",
+
+        "Car Detailing",
+
+        "Mobile Car Wash",
+
+        "Ceramic Coating",
+
+        "Window Tinting",
+
+        "Tire Shop",
+
+        "Towing Service",
+
+        "Jump Start",
+
+        "Flat Tire Repair",
+
+        "Auto AC Repair"
+
+      ]
+
+    },
+
+    {
+
+      "category": "Transportation & Logistics",
+
+      "services": [
+
+        "Moving Company",
+
+        "Local Movers",
+
+        "Long Distance Movers",
+
+        "Packing Service",
+
+        "Storage Services",
+
+        "Courier Service",
+
+        "Same Day Delivery",
+
+        "Freight Shipping",
+
+        "Logistics Coordinator",
+
+        "Chauffeur Service",
+
+        "Airport Transfer"
+
+      ]
+
+    },
+
+    {
+
+      "category": "Family & Personal",
+
+      "services": [
+
+        "Child Care",
+
+        "Nanny",
+
+        "Babysitter",
+
+        "Elder Care",
+
+        "Senior Companion",
+
+        "Caregiver",
+
+        "Personal Chef",
+
+        "Meal Prep",
+
+        "Personal Shopper",
+
+        "Errand Runner",
+
+        "Concierge Service",
+
+        "Life Organizer",
+
+        "Professional Organizer",
+
+        "Genealogist"
+
+      ]
+
+    },
+
+    {
+
+      "category": "Fitness & Sports",
+
+      "services": [
+
+        "Personal Trainer",
+
+        "Group Fitness Instructor",
+
+        "CrossFit Coach",
+
+        "Yoga Teacher",
+
+        "Pilates Instructor",
+
+        "Martial Arts Instructor",
+
+        "Swim Instructor",
+
+        "Golf Instructor",
+
+        "Tennis Coach",
+
+        "Soccer Coach",
+
+        "Running Coach",
+
+        "Nutrition Coach"
+
+      ]
+
+    },
+
+    {
+
+      "category": "Real Estate & Property",
+
+      "services": [
+
+        "Real Estate Agent",
+
+        "Buyer's Agent",
+
+        "Seller's Agent",
+
+        "Property Manager",
+
+        "Home Inspector",
+
+        "Appraiser",
+
+        "Real Estate Photographer",
+
+        "Staging Professional",
+
+        "Mortgage Broker",
+
+        "Title Company"
+
+      ]
+
+    },
+
+    {
+
+      "category": "Legal Services",
+
+      "services": [
+
+        "Criminal Defense Lawyer",
+
+        "Family Attorney",
+
+        "Divorce Lawyer",
+
+        "Immigration Attorney",
+
+        "Personal Injury Lawyer",
+
+        "Estate Planning Attorney",
+
+        "Business Lawyer",
+
+        "Intellectual Property Attorney",
+
+        "Real Estate Attorney",
+
+        "Bankruptcy Attorney",
+
+        "Employment Lawyer"
+
+      ]
+
+    },
+
+    {
+
+      "category": "Financial Services",
+
+      "services": [
+
+        "Financial Planner",
+
+        "Investment Advisor",
+
+        "Tax Consultant",
+
+        "Bookkeeper",
+
+        "CPA",
+
+        "Payroll Specialist",
+
+        "Loan Officer",
+
+        "Mortgage Advisor",
+
+        "Credit Counselor",
+
+        "Debt Relief Specialist"
+
+      ]
+
+    }
+
+  ]
+
+}

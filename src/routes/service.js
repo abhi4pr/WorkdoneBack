@@ -7,11 +7,19 @@ import {
   updateService,
   deleteService,
   searchServices,
+  getAllDefaultCategories,
+  getAllDefaultServicesByCategory,
 } from "../controllers/serviceController.js";
 import authMiddleware from "../middlewares/authMiddleware.js";
 
 const router = express.Router();
 
+router.get("/default_categories", authMiddleware, getAllDefaultCategories);
+router.get(
+  "/default_services/:categoryid",
+  authMiddleware,
+  getAllDefaultServicesByCategory,
+);
 router.post("/create_service", authMiddleware, createService);
 router.get("/get_all_services", authMiddleware, getAllServices);
 router.get("/get_service/:_id", authMiddleware, getServiceById);

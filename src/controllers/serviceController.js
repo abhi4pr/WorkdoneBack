@@ -1,4 +1,41 @@
 import Service from "../models/Service.js";
+import Defaultcategory from "../models/Defaultcategory.js";
+import Defaultservice from "../models/Defaultservice.js";
+
+export const getAllDefaultCategories = async (req, res) => {
+  try {
+    const categories = await Defaultcategory.find().sort({ name: 1 });
+
+    return res.status(200).json({
+      message: "categories fetched successfully",
+      data: categories,
+    });
+  } catch (err) {
+    res
+      .status(500)
+      .json({ message: "failed to fetch services", err: err.message });
+  }
+};
+
+export const getAllDefaultServicesByCategory = async (req, res) => {
+  try {
+    const { categoryid } = req.params;
+
+    const services = await Defaultservice.find({ category: categoryid })
+      .select("name")
+      .sort({ name: 1 });
+
+    return res.status(200).json({
+      message: "services by category fetched success",
+      data: services,
+    });
+  } catch (err) {
+    return res.status(500).json({
+      message: "failed to fetch default services by category",
+      err: err.message,
+    });
+  }
+};
 
 export const createService = async (req, res) => {
   try {
