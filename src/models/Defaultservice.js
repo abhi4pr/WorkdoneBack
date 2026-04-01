@@ -12,6 +12,9 @@ const defaultserviceSchema = new mongoose.Schema(
       required: true,
       trim: true,
     },
+    service_icon: {
+      type: String,
+    },
   },
   { timestamps: true },
 );

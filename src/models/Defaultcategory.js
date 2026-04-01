@@ -8,6 +8,9 @@ const defaultcategorySchema = new mongoose.Schema(
       unique: true,
       trim: true,
     },
+    icon: {
+      type: String,
+    },
   },
   { timestamps: true },
 );
