@@ -35,7 +35,7 @@ export const createService = async (req, res) => {
 export const getAllServices = async (req, res) => {
   try {
     const services = await Service.find({ deleted: false })
-      .populate("created_by", "name surname profile_pic")
+      .populate("created_by", "name surname profile_pic phone")
       .sort({ createdAt: -1 });
 
     return res.status(200).json({
@@ -54,7 +54,7 @@ export const getServiceById = async (req, res) => {
   try {
     const service = await Service.findById(req.params._id).populate(
       "created_by",
-      "name surname profile_pic",
+      "name surname profile_pic phone",
     );
 
     if (!service) {
@@ -156,6 +156,36 @@ export const deleteService = async (req, res) => {
   } catch (error) {
     return res.status(500).json({
       message: "Failed to delete service",
+      error: error.message,
+    });
+  }
+};
+
+export const searchServices = async (req, res) => {
+  try {
+    const { q } = req.query;
+
+    if (!q) {
+      return res.status(400).json({
+        message: "Search query is required",
+      });
+    }
+
+    const services = await Service.find({
+      deleted: false,
+      status: true,
+      name: { $regex: q, $options: "i" }, // partial + case insensitive
+    })
+      .populate("created_by", "name surname profile_pic phone")
+      .sort({ createdAt: -1 });
+
+    return res.status(200).json({
+      message: "Search results fetched successfully",
+      services,
+    });
+  } catch (error) {
+    return res.status(500).json({
+      message: "Search failed",
       error: error.message,
     });
   }
