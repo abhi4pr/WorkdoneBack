@@ -27,5 +27,6 @@ router.get("/get_service/user/:userid", authMiddleware, getServicesByUser);
 router.put("/update_service/:_id", authMiddleware, updateService);
 router.delete("/_:id", authMiddleware, deleteService);
 router.get("/search_services", authMiddleware, searchServices);
+// router.post("/seed_data", authMiddleware, seedData);
 
 export default router;

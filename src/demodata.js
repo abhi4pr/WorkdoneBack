@@ -1,13 +1,9 @@
-{
-
-  "categories": [
-
+export const demodata = {
+  categories: [
     {
+      category: "Home Services",
 
-      "category": "Home Services",
-
-      "services": [
-
+      services: [
         "Plumbing",
 
         "Emergency Plumber",
@@ -96,18 +92,14 @@
 
         "Home Theater Installation",
 
-        "Smart Home Setup"
-
-      ]
-
+        "Smart Home Setup",
+      ],
     },
 
     {
+      category: "Health & Wellness",
 
-      "category": "Health & Wellness",
-
-      "services": [
-
+      services: [
         "Personal Trainer",
 
         "Yoga Instructor",
@@ -138,18 +130,14 @@
 
         "Meditation Instructor",
 
-        "Holistic Health Coach"
-
-      ]
-
+        "Holistic Health Coach",
+      ],
     },
 
     {
+      category: "Beauty & Grooming",
 
-      "category": "Beauty & Grooming",
-
-      "services": [
-
+      services: [
         "Hair Stylist",
 
         "Haircut",
@@ -184,18 +172,14 @@
 
         "Spa Services",
 
-        "Tanning"
-
-      ]
-
+        "Tanning",
+      ],
     },
 
     {
+      category: "Technology & IT",
 
-      "category": "Technology & IT",
-
-      "services": [
-
+      services: [
         "Web Developer",
 
         "Frontend Developer",
@@ -234,18 +218,14 @@
 
         "E-commerce Developer",
 
-        "CRM Specialist"
-
-      ]
-
+        "CRM Specialist",
+      ],
     },
 
     {
+      category: "Creative & Design",
 
-      "category": "Creative & Design",
-
-      "services": [
-
+      services: [
         "Graphic Designer",
 
         "Logo Designer",
@@ -278,18 +258,14 @@
 
         "Architectural Designer",
 
-        "Fashion Designer"
-
-      ]
-
+        "Fashion Designer",
+      ],
     },
 
     {
+      category: "Marketing & Advertising",
 
-      "category": "Marketing & Advertising",
-
-      "services": [
-
+      services: [
         "SEO Specialist",
 
         "Social Media Manager",
@@ -314,18 +290,14 @@
 
         "Influencer Marketing Manager",
 
-        "Video Marketing Specialist"
-
-      ]
-
+        "Video Marketing Specialist",
+      ],
     },
 
     {
+      category: "Events & Hospitality",
 
-      "category": "Events & Hospitality",
-
-      "services": [
-
+      services: [
         "Event Planner",
 
         "Wedding Planner",
@@ -358,18 +330,14 @@
 
         "Magician",
 
-        "Children's Entertainer"
-
-      ]
-
+        "Children's Entertainer",
+      ],
     },
 
     {
+      category: "Professional Services",
 
-      "category": "Professional Services",
-
-      "services": [
-
+      services: [
         "Business Consultant",
 
         "Management Consultant",
@@ -408,18 +376,14 @@
 
         "Notary Public",
 
-        "Virtual Assistant"
-
-      ]
-
+        "Virtual Assistant",
+      ],
     },
 
     {
+      category: "Education & Tutoring",
 
-      "category": "Education & Tutoring",
-
-      "services": [
-
+      services: [
         "Math Tutor",
 
         "Science Tutor",
@@ -454,18 +418,14 @@
 
         "Coding Instructor",
 
-        "College Counselor"
-
-      ]
-
+        "College Counselor",
+      ],
     },
 
     {
+      category: "Pet Services",
 
-      "category": "Pet Services",
-
-      "services": [
-
+      services: [
         "Dog Walker",
 
         "Pet Sitter",
@@ -484,18 +444,14 @@
 
         "Pet Taxi",
 
-        "Animal Behaviorist"
-
-      ]
-
+        "Animal Behaviorist",
+      ],
     },
 
     {
+      category: "Automotive",
 
-      "category": "Automotive",
-
-      "services": [
-
+      services: [
         "Auto Mechanic",
 
         "Oil Change",
@@ -526,18 +482,14 @@
 
         "Flat Tire Repair",
 
-        "Auto AC Repair"
-
-      ]
-
+        "Auto AC Repair",
+      ],
     },
 
     {
+      category: "Transportation & Logistics",
 
-      "category": "Transportation & Logistics",
-
-      "services": [
-
+      services: [
         "Moving Company",
 
         "Local Movers",
@@ -558,18 +510,14 @@
 
         "Chauffeur Service",
 
-        "Airport Transfer"
-
-      ]
-
+        "Airport Transfer",
+      ],
     },
 
     {
+      category: "Family & Personal",
 
-      "category": "Family & Personal",
-
-      "services": [
-
+      services: [
         "Child Care",
 
         "Nanny",
@@ -596,18 +544,14 @@
 
         "Professional Organizer",
 
-        "Genealogist"
-
-      ]
-
+        "Genealogist",
+      ],
     },
 
     {
+      category: "Fitness & Sports",
 
-      "category": "Fitness & Sports",
-
-      "services": [
-
+      services: [
         "Personal Trainer",
 
         "Group Fitness Instructor",
@@ -630,18 +574,14 @@
 
         "Running Coach",
 
-        "Nutrition Coach"
-
-      ]
-
+        "Nutrition Coach",
+      ],
     },
 
     {
+      category: "Real Estate & Property",
 
-      "category": "Real Estate & Property",
-
-      "services": [
-
+      services: [
         "Real Estate Agent",
 
         "Buyer's Agent",
@@ -660,18 +600,14 @@
 
         "Mortgage Broker",
 
-        "Title Company"
-
-      ]
-
+        "Title Company",
+      ],
     },
 
     {
+      category: "Legal Services",
 
-      "category": "Legal Services",
-
-      "services": [
-
+      services: [
         "Criminal Defense Lawyer",
 
         "Family Attorney",
@@ -692,18 +628,14 @@
 
         "Bankruptcy Attorney",
 
-        "Employment Lawyer"
-
-      ]
-
+        "Employment Lawyer",
+      ],
     },
 
     {
+      category: "Financial Services",
 
-      "category": "Financial Services",
-
-      "services": [
-
+      services: [
         "Financial Planner",
 
         "Investment Advisor",
@@ -722,12 +654,8 @@
 
         "Credit Counselor",
 
-        "Debt Relief Specialist"
-
-      ]
-
-    }
-
-  ]
-
-}
+        "Debt Relief Specialist",
+      ],
+    },
+  ],
+};

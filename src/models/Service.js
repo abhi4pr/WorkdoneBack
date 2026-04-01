@@ -34,6 +34,14 @@ const serviceSchema = new mongoose.Schema(
       required: false,
       default: null,
     },
+    state_location: {
+      type: String,
+      required: true,
+    },
+    city_location: {
+      type: String,
+      required: true,
+    },
     status: {
       type: Boolean,
       required: true,

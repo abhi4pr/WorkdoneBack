@@ -1,6 +1,7 @@
 import Service from "../models/Service.js";
 import Defaultcategory from "../models/Defaultcategory.js";
 import Defaultservice from "../models/Defaultservice.js";
+import { demodata } from "../demodata.js";
 
 export const getAllDefaultCategories = async (req, res) => {
   try {
@@ -39,12 +40,20 @@ export const getAllDefaultServicesByCategory = async (req, res) => {
 
 export const createService = async (req, res) => {
   try {
-    const { created_by, name, category, price, description, duration } =
-      req.body;
+    const {
+      created_by,
+      name,
+      category,
+      price,
+      description,
+      duration,
+      state_location,
+      city_location,
+    } = req.body;
 
-    if (!created_by || !name || !price) {
+    if (!created_by || !name || !price || !state_location || !city_location) {
       return res.status(400).json({
-        message: "created_by, name and price are required",
+        message: "created_by, name, state_location and price are required",
       });
     }
 
@@ -55,6 +64,8 @@ export const createService = async (req, res) => {
       price,
       description,
       duration,
+      state_location,
+      city_location,
     });
 
     return res.status(201).json({
@@ -227,3 +238,21 @@ export const searchServices = async (req, res) => {
     });
   }
 };
+
+// export const seedData = async () => {
+//   for (let i = 0; i < demodata.categories.length; i++) {
+//     const cat = demodata.categories[i];
+
+//     const createdCategory = await Defaultcategory.create({
+//       name: cat.category,
+//     });
+
+//     const services = cat.services.map((service) => ({
+//       name: service,
+//       category: createdCategory._id,
+//     }));
+
+//     await Defaultservice.insertMany(services);
+//   }
+//   console.log("Seeding done");
+// };
