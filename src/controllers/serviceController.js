@@ -23,7 +23,7 @@ export const getAllDefaultServicesByCategory = async (req, res) => {
     const { categoryid } = req.params;
 
     const services = await Defaultservice.find({ category: categoryid })
-      .select("name")
+      .select("name service_icon")
       .sort({ name: 1 });
 
     return res.status(200).json({
