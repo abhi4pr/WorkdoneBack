@@ -47,13 +47,13 @@ export const createService = async (req, res) => {
       price,
       description,
       duration,
-      state_location,
+      country_location,
       city_location,
     } = req.body;
 
-    if (!created_by || !name || !price || !state_location || !city_location) {
+    if (!created_by || !name || !price || !country_location || !city_location) {
       return res.status(400).json({
-        message: "created_by, name, state_location and price are required",
+        message: "created_by, name, country_location and price are required",
       });
     }
 
@@ -64,7 +64,7 @@ export const createService = async (req, res) => {
       price,
       description,
       duration,
-      state_location,
+      country_location,
       city_location,
     });
 
@@ -239,20 +239,35 @@ export const searchServices = async (req, res) => {
   }
 };
 
-// export const seedData = async () => {
-//   for (let i = 0; i < demodata.categories.length; i++) {
-//     const cat = demodata.categories[i];
+export const seedData = async () => {
+  try {
+    for (let i = 0; i < demodata.categories.length; i++) {
+      const cat = demodata.categories[i];
 
-//     const createdCategory = await Defaultcategory.create({
-//       name: cat.category,
-//     });
+      // create category with icon
+      const createdCategory = await Defaultcategory.create({
+        name: cat.category,
+        icon: cat.icon, // NEW
+      });
 
-//     const services = cat.services.map((service) => ({
-//       name: service,
-//       category: createdCategory._id,
-//     }));
+      // map services properly
+      const services = [];
 
-//     await Defaultservice.insertMany(services);
-//   }
-//   console.log("Seeding done");
-// };
+      for (let j = 0; j < cat.services.length; j++) {
+        const service = cat.services[j];
+
+        services.push({
+          name: service.name,
+          service_icon: service.service_icon, // NEW
+          category: createdCategory._id,
+        });
+      }
+
+      await Defaultservice.insertMany(services);
+    }
+
+    console.log("Seeding done");
+  } catch (err) {
+    console.error("Seeding failed:", err);
+  }
+};

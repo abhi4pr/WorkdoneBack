@@ -34,7 +34,7 @@ const serviceSchema = new mongoose.Schema(
       required: false,
       default: null,
     },
-    state_location: {
+    country_location: {
       type: String,
       required: true,
     },

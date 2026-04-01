@@ -2,659 +2,398 @@ export const demodata = {
   categories: [
     {
       category: "Home Services",
-
+      icon: "🏠",
       services: [
-        "Plumbing",
-
-        "Emergency Plumber",
-
-        "Electrician",
-
-        "HVAC Installation",
-
-        "HVAC Repair",
-
-        "AC Repair",
-
-        "Heater Repair",
-
-        "Carpentry",
-
-        "Furniture Assembly",
-
-        "Cabinet Installation",
-
-        "Painting",
-
-        "Interior Painting",
-
-        "Exterior Painting",
-
-        "Roofing",
-
-        "Roof Repair",
-
-        "Roof Replacement",
-
-        "Flooring",
-
-        "Tile Installation",
-
-        "Hardwood Floor Refinishing",
-
-        "Landscaping",
-
-        "Lawn Mowing",
-
-        "Tree Trimming",
-
-        "Garden Design",
-
-        "House Cleaning",
-
-        "Deep Cleaning",
-
-        "Move-in/Move-out Cleaning",
-
-        "Window Cleaning",
-
-        "Pest Control",
-
-        "Termite Treatment",
-
-        "Bed Bug Extermination",
-
-        "Appliance Repair",
-
-        "Refrigerator Repair",
-
-        "Washer/Dryer Repair",
-
-        "Locksmith",
-
-        "Smart Lock Installation",
-
-        "Emergency Lockout",
-
-        "Handyman Services",
-
-        "Drywall Repair",
-
-        "Gutter Cleaning",
-
-        "Pressure Washing",
-
-        "Pool Cleaning",
-
-        "Garage Door Repair",
-
-        "Solar Panel Installation",
-
-        "Home Theater Installation",
-
-        "Smart Home Setup",
+        { name: "Plumbing", service_icon: "🔧" },
+        { name: "Emergency Plumber", service_icon: "🚨" },
+        { name: "Electrician", service_icon: "⚡" },
+        { name: "HVAC Installation", service_icon: "❄️" },
+        { name: "HVAC Repair", service_icon: "🔧" },
+        { name: "AC Repair", service_icon: "❄️" },
+        { name: "Heater Repair", service_icon: "🔥" },
+        { name: "Carpentry", service_icon: "🛠️" },
+        { name: "Furniture Assembly", service_icon: "🪑" },
+        { name: "Cabinet Installation", service_icon: "🪚" },
+        { name: "Painting", service_icon: "🎨" },
+        { name: "Interior Painting", service_icon: "🖌️" },
+        { name: "Exterior Painting", service_icon: "🏠" },
+        { name: "Roofing", service_icon: "🏠" },
+        { name: "Roof Repair", service_icon: "🔨" },
+        { name: "Roof Replacement", service_icon: "🏠" },
+        { name: "Flooring", service_icon: "🪵" },
+        { name: "Tile Installation", service_icon: "🧱" },
+        { name: "Hardwood Floor Refinishing", service_icon: "🪵" },
+        { name: "Landscaping", service_icon: "🌳" },
+        { name: "Lawn Mowing", service_icon: "🌱" },
+        { name: "Tree Trimming", service_icon: "🌳" },
+        { name: "Garden Design", service_icon: "🌺" },
+        { name: "House Cleaning", service_icon: "🧹" },
+        { name: "Deep Cleaning", service_icon: "🧼" },
+        { name: "Move-in/Move-out Cleaning", service_icon: "🏠" },
+        { name: "Window Cleaning", service_icon: "🪟" },
+        { name: "Pest Control", service_icon: "🐜" },
+        { name: "Termite Treatment", service_icon: "🐛" },
+        { name: "Bed Bug Extermination", service_icon: "🛏️" },
+        { name: "Appliance Repair", service_icon: "🔌" },
+        { name: "Refrigerator Repair", service_icon: "❄️" },
+        { name: "Washer/Dryer Repair", service_icon: "🧺" },
+        { name: "Locksmith", service_icon: "🔑" },
+        { name: "Smart Lock Installation", service_icon: "🔒" },
+        { name: "Emergency Lockout", service_icon: "🚪" },
+        { name: "Handyman Services", service_icon: "🛠️" },
+        { name: "Drywall Repair", service_icon: "🧱" },
+        { name: "Gutter Cleaning", service_icon: "🌧️" },
+        { name: "Pressure Washing", service_icon: "💦" },
+        { name: "Pool Cleaning", service_icon: "🏊" },
+        { name: "Garage Door Repair", service_icon: "🚪" },
+        { name: "Solar Panel Installation", service_icon: "☀️" },
+        { name: "Home Theater Installation", service_icon: "📺" },
+        { name: "Smart Home Setup", service_icon: "🏡" },
       ],
     },
 
     {
       category: "Health & Wellness",
-
+      icon: "🧘",
       services: [
-        "Personal Trainer",
-
-        "Yoga Instructor",
-
-        "Pilates Instructor",
-
-        "Massage Therapist",
-
-        "Deep Tissue Massage",
-
-        "Sports Massage",
-
-        "Nutritionist",
-
-        "Dietitian",
-
-        "Mental Health Counselor",
-
-        "Therapist",
-
-        "Life Coach",
-
-        "Acupuncture",
-
-        "Chiropractor",
-
-        "Physical Therapist",
-
-        "Meditation Instructor",
-
-        "Holistic Health Coach",
+        { name: "Personal Trainer", service_icon: "🏋️" },
+        { name: "Yoga Instructor", service_icon: "🧘" },
+        { name: "Pilates Instructor", service_icon: "🧘‍♀️" },
+        { name: "Massage Therapist", service_icon: "💆" },
+        { name: "Deep Tissue Massage", service_icon: "💆" },
+        { name: "Sports Massage", service_icon: "🏃" },
+        { name: "Nutritionist", service_icon: "🥗" },
+        { name: "Dietitian", service_icon: "🥑" },
+        { name: "Mental Health Counselor", service_icon: "🧠" },
+        { name: "Therapist", service_icon: "🗣️" },
+        { name: "Life Coach", service_icon: "🎯" },
+        { name: "Acupuncture", service_icon: "🌿" },
+        { name: "Chiropractor", service_icon: "🦴" },
+        { name: "Physical Therapist", service_icon: "🦵" },
+        { name: "Meditation Instructor", service_icon: "🧘" },
+        { name: "Holistic Health Coach", service_icon: "🌱" },
       ],
     },
 
     {
       category: "Beauty & Grooming",
-
+      icon: "💇",
       services: [
-        "Hair Stylist",
-
-        "Haircut",
-
-        "Hair Coloring",
-
-        "Barber",
-
-        "Makeup Artist",
-
-        "Bridal Makeup",
-
-        "Nail Technician",
-
-        "Manicure",
-
-        "Pedicure",
-
-        "Esthetician",
-
-        "Facial",
-
-        "Waxing",
-
-        "Lash Extensions",
-
-        "Microblading",
-
-        "Tattoo Artist",
-
-        "Piercing",
-
-        "Spa Services",
-
-        "Tanning",
+        { name: "Hair Stylist", service_icon: "💇" },
+        { name: "Haircut", service_icon: "✂️" },
+        { name: "Hair Coloring", service_icon: "🎨" },
+        { name: "Barber", service_icon: "💈" },
+        { name: "Makeup Artist", service_icon: "💄" },
+        { name: "Bridal Makeup", service_icon: "👰" },
+        { name: "Nail Technician", service_icon: "💅" },
+        { name: "Manicure", service_icon: "💅" },
+        { name: "Pedicure", service_icon: "🦶" },
+        { name: "Esthetician", service_icon: "🧴" },
+        { name: "Facial", service_icon: "🧖" },
+        { name: "Waxing", service_icon: "🪒" },
+        { name: "Lash Extensions", service_icon: "👁️" },
+        { name: "Microblading", service_icon: "✏️" },
+        { name: "Tattoo Artist", service_icon: "🖋️" },
+        { name: "Piercing", service_icon: "📍" },
+        { name: "Spa Services", service_icon: "🧖‍♀️" },
+        { name: "Tanning", service_icon: "☀️" },
       ],
     },
 
     {
       category: "Technology & IT",
-
+      icon: "💻",
       services: [
-        "Web Developer",
-
-        "Frontend Developer",
-
-        "Backend Developer",
-
-        "Full Stack Developer",
-
-        "Mobile App Developer",
-
-        "iOS Developer",
-
-        "Android Developer",
-
-        "IT Support",
-
-        "Computer Repair",
-
-        "Network Setup",
-
-        "Data Recovery",
-
-        "Cybersecurity Specialist",
-
-        "Cloud Consultant",
-
-        "AWS Specialist",
-
-        "Database Administrator",
-
-        "DevOps Engineer",
-
-        "AI/ML Consultant",
-
-        "WordPress Developer",
-
-        "E-commerce Developer",
-
-        "CRM Specialist",
+        { name: "Web Developer", service_icon: "🌐" },
+        { name: "Frontend Developer", service_icon: "🎨" },
+        { name: "Backend Developer", service_icon: "⚙️" },
+        { name: "Full Stack Developer", service_icon: "🔄" },
+        { name: "Mobile App Developer", service_icon: "📱" },
+        { name: "iOS Developer", service_icon: "" },
+        { name: "Android Developer", service_icon: "🤖" },
+        { name: "IT Support", service_icon: "🛠️" },
+        { name: "Computer Repair", service_icon: "💻" },
+        { name: "Network Setup", service_icon: "📡" },
+        { name: "Data Recovery", service_icon: "💾" },
+        { name: "Cybersecurity Specialist", service_icon: "🔒" },
+        { name: "Cloud Consultant", service_icon: "☁️" },
+        { name: "AWS Specialist", service_icon: "☁️" },
+        { name: "Database Administrator", service_icon: "🗄️" },
+        { name: "DevOps Engineer", service_icon: "🔄" },
+        { name: "AI/ML Consultant", service_icon: "🤖" },
+        { name: "WordPress Developer", service_icon: "📝" },
+        { name: "E-commerce Developer", service_icon: "🛒" },
+        { name: "CRM Specialist", service_icon: "📊" },
       ],
     },
 
     {
       category: "Creative & Design",
-
+      icon: "🎨",
       services: [
-        "Graphic Designer",
-
-        "Logo Designer",
-
-        "Branding Specialist",
-
-        "UI/UX Designer",
-
-        "Web Designer",
-
-        "Photographer",
-
-        "Wedding Photographer",
-
-        "Portrait Photographer",
-
-        "Product Photographer",
-
-        "Videographer",
-
-        "Video Editor",
-
-        "Animator",
-
-        "3D Modeler",
-
-        "Illustrator",
-
-        "Interior Designer",
-
-        "Architectural Designer",
-
-        "Fashion Designer",
+        { name: "Graphic Designer", service_icon: "🎨" },
+        { name: "Logo Designer", service_icon: "🔖" },
+        { name: "Branding Specialist", service_icon: "🏷️" },
+        { name: "UI/UX Designer", service_icon: "📱" },
+        { name: "Web Designer", service_icon: "🌐" },
+        { name: "Photographer", service_icon: "📸" },
+        { name: "Wedding Photographer", service_icon: "💒" },
+        { name: "Portrait Photographer", service_icon: "👤" },
+        { name: "Product Photographer", service_icon: "📦" },
+        { name: "Videographer", service_icon: "🎥" },
+        { name: "Video Editor", service_icon: "✂️" },
+        { name: "Animator", service_icon: "🎞️" },
+        { name: "3D Modeler", service_icon: "🧊" },
+        { name: "Illustrator", service_icon: "✏️" },
+        { name: "Interior Designer", service_icon: "🛋️" },
+        { name: "Architectural Designer", service_icon: "🏛️" },
+        { name: "Fashion Designer", service_icon: "👗" },
       ],
     },
 
     {
       category: "Marketing & Advertising",
-
+      icon: "📈",
       services: [
-        "SEO Specialist",
-
-        "Social Media Manager",
-
-        "Content Writer",
-
-        "Copywriter",
-
-        "PPC Specialist",
-
-        "Google Ads Expert",
-
-        "Facebook Ads Manager",
-
-        "Email Marketing Specialist",
-
-        "Marketing Consultant",
-
-        "Brand Strategist",
-
-        "Publicist",
-
-        "Influencer Marketing Manager",
-
-        "Video Marketing Specialist",
+        { name: "SEO Specialist", service_icon: "🔍" },
+        { name: "Social Media Manager", service_icon: "📱" },
+        { name: "Content Writer", service_icon: "✍️" },
+        { name: "Copywriter", service_icon: "📝" },
+        { name: "PPC Specialist", service_icon: "💰" },
+        { name: "Google Ads Expert", service_icon: "📊" },
+        { name: "Facebook Ads Manager", service_icon: "📘" },
+        { name: "Email Marketing Specialist", service_icon: "✉️" },
+        { name: "Marketing Consultant", service_icon: "🎯" },
+        { name: "Brand Strategist", service_icon: "🏷️" },
+        { name: "Publicist", service_icon: "📢" },
+        { name: "Influencer Marketing Manager", service_icon: "⭐" },
+        { name: "Video Marketing Specialist", service_icon: "🎥" },
       ],
     },
 
     {
       category: "Events & Hospitality",
-
+      icon: "🎉",
       services: [
-        "Event Planner",
-
-        "Wedding Planner",
-
-        "Corporate Event Planner",
-
-        "Caterer",
-
-        "Bartender",
-
-        "DJ",
-
-        "Wedding DJ",
-
-        "Live Musician",
-
-        "Photobooth Rental",
-
-        "Party Rental",
-
-        "Tent Rental",
-
-        "Florist",
-
-        "Wedding Florist",
-
-        "Event Decorator",
-
-        "Balloon Artist",
-
-        "Magician",
-
-        "Children's Entertainer",
+        { name: "Event Planner", service_icon: "📅" },
+        { name: "Wedding Planner", service_icon: "💒" },
+        { name: "Corporate Event Planner", service_icon: "💼" },
+        { name: "Caterer", service_icon: "🍽️" },
+        { name: "Bartender", service_icon: "🍹" },
+        { name: "DJ", service_icon: "🎧" },
+        { name: "Wedding DJ", service_icon: "💒" },
+        { name: "Live Musician", service_icon: "🎸" },
+        { name: "Photobooth Rental", service_icon: "📸" },
+        { name: "Party Rental", service_icon: "🎈" },
+        { name: "Tent Rental", service_icon: "⛺" },
+        { name: "Florist", service_icon: "🌸" },
+        { name: "Wedding Florist", service_icon: "💐" },
+        { name: "Event Decorator", service_icon: "🎨" },
+        { name: "Balloon Artist", service_icon: "🎈" },
+        { name: "Magician", service_icon: "🎩" },
+        { name: "Children's Entertainer", service_icon: "🎉" },
       ],
     },
 
     {
       category: "Professional Services",
-
+      icon: "💼",
       services: [
-        "Business Consultant",
-
-        "Management Consultant",
-
-        "HR Consultant",
-
-        "Recruiter",
-
-        "Accountant",
-
-        "CPA",
-
-        "Bookkeeper",
-
-        "Tax Preparer",
-
-        "Financial Advisor",
-
-        "Wealth Manager",
-
-        "Insurance Agent",
-
-        "Real Estate Agent",
-
-        "Property Manager",
-
-        "Legal Consultant",
-
-        "Immigration Lawyer",
-
-        "Family Lawyer",
-
-        "Corporate Lawyer",
-
-        "Patent Attorney",
-
-        "Notary Public",
-
-        "Virtual Assistant",
+        { name: "Business Consultant", service_icon: "📊" },
+        { name: "Management Consultant", service_icon: "📋" },
+        { name: "HR Consultant", service_icon: "👥" },
+        { name: "Recruiter", service_icon: "🔍" },
+        { name: "Accountant", service_icon: "📊" },
+        { name: "CPA", service_icon: "📋" },
+        { name: "Bookkeeper", service_icon: "📒" },
+        { name: "Tax Preparer", service_icon: "💰" },
+        { name: "Financial Advisor", service_icon: "💼" },
+        { name: "Wealth Manager", service_icon: "📈" },
+        { name: "Insurance Agent", service_icon: "🛡️" },
+        { name: "Real Estate Agent", service_icon: "🏠" },
+        { name: "Property Manager", service_icon: "🏢" },
+        { name: "Legal Consultant", service_icon: "⚖️" },
+        { name: "Immigration Lawyer", service_icon: "🌍" },
+        { name: "Family Lawyer", service_icon: "👨‍👩‍👧" },
+        { name: "Corporate Lawyer", service_icon: "💼" },
+        { name: "Patent Attorney", service_icon: "📜" },
+        { name: "Notary Public", service_icon: "📝" },
+        { name: "Virtual Assistant", service_icon: "🖥️" },
       ],
     },
 
     {
       category: "Education & Tutoring",
-
+      icon: "📚",
       services: [
-        "Math Tutor",
-
-        "Science Tutor",
-
-        "English Tutor",
-
-        "Test Prep Tutor",
-
-        "SAT Prep",
-
-        "ACT Prep",
-
-        "Language Instructor",
-
-        "Spanish Teacher",
-
-        "French Teacher",
-
-        "ESL Teacher",
-
-        "Music Teacher",
-
-        "Piano Teacher",
-
-        "Guitar Teacher",
-
-        "Violin Teacher",
-
-        "Art Teacher",
-
-        "Dance Instructor",
-
-        "Coding Instructor",
-
-        "College Counselor",
+        { name: "Math Tutor", service_icon: "📐" },
+        { name: "Science Tutor", service_icon: "🔬" },
+        { name: "English Tutor", service_icon: "📖" },
+        { name: "Test Prep Tutor", service_icon: "📝" },
+        { name: "SAT Prep", service_icon: "📚" },
+        { name: "ACT Prep", service_icon: "📚" },
+        { name: "Language Instructor", service_icon: "🗣️" },
+        { name: "Spanish Teacher", service_icon: "🇪🇸" },
+        { name: "French Teacher", service_icon: "🇫🇷" },
+        { name: "ESL Teacher", service_icon: "🇬🇧" },
+        { name: "Music Teacher", service_icon: "🎵" },
+        { name: "Piano Teacher", service_icon: "🎹" },
+        { name: "Guitar Teacher", service_icon: "🎸" },
+        { name: "Violin Teacher", service_icon: "🎻" },
+        { name: "Art Teacher", service_icon: "🎨" },
+        { name: "Dance Instructor", service_icon: "💃" },
+        { name: "Coding Instructor", service_icon: "💻" },
+        { name: "College Counselor", service_icon: "🎓" },
       ],
     },
 
     {
       category: "Pet Services",
-
+      icon: "🐾",
       services: [
-        "Dog Walker",
-
-        "Pet Sitter",
-
-        "Dog Trainer",
-
-        "Pet Groomer",
-
-        "Mobile Pet Grooming",
-
-        "Veterinarian",
-
-        "Mobile Vet",
-
-        "Pet Boarding",
-
-        "Pet Taxi",
-
-        "Animal Behaviorist",
+        { name: "Dog Walker", service_icon: "🐕" },
+        { name: "Pet Sitter", service_icon: "🐶" },
+        { name: "Dog Trainer", service_icon: "🐕" },
+        { name: "Pet Groomer", service_icon: "✂️" },
+        { name: "Mobile Pet Grooming", service_icon: "🚐" },
+        { name: "Veterinarian", service_icon: "🐾" },
+        { name: "Mobile Vet", service_icon: "🚐" },
+        { name: "Pet Boarding", service_icon: "🏠" },
+        { name: "Pet Taxi", service_icon: "🚕" },
+        { name: "Animal Behaviorist", service_icon: "🐾" },
       ],
     },
 
     {
       category: "Automotive",
-
+      icon: "🚗",
       services: [
-        "Auto Mechanic",
-
-        "Oil Change",
-
-        "Brake Repair",
-
-        "Engine Repair",
-
-        "Transmission Repair",
-
-        "Auto Body Shop",
-
-        "Paintless Dent Repair",
-
-        "Car Detailing",
-
-        "Mobile Car Wash",
-
-        "Ceramic Coating",
-
-        "Window Tinting",
-
-        "Tire Shop",
-
-        "Towing Service",
-
-        "Jump Start",
-
-        "Flat Tire Repair",
-
-        "Auto AC Repair",
+        { name: "Auto Mechanic", service_icon: "🔧" },
+        { name: "Oil Change", service_icon: "🛢️" },
+        { name: "Brake Repair", service_icon: "🛑" },
+        { name: "Engine Repair", service_icon: "⚙️" },
+        { name: "Transmission Repair", service_icon: "🔄" },
+        { name: "Auto Body Shop", service_icon: "🔨" },
+        { name: "Paintless Dent Repair", service_icon: "🔨" },
+        { name: "Car Detailing", service_icon: "✨" },
+        { name: "Mobile Car Wash", service_icon: "🚿" },
+        { name: "Ceramic Coating", service_icon: "🛡️" },
+        { name: "Window Tinting", service_icon: "🌑" },
+        { name: "Tire Shop", service_icon: "🛞" },
+        { name: "Towing Service", service_icon: "🚚" },
+        { name: "Jump Start", service_icon: "🔋" },
+        { name: "Flat Tire Repair", service_icon: "🛞" },
+        { name: "Auto AC Repair", service_icon: "❄️" },
       ],
     },
 
     {
       category: "Transportation & Logistics",
-
+      icon: "🚚",
       services: [
-        "Moving Company",
-
-        "Local Movers",
-
-        "Long Distance Movers",
-
-        "Packing Service",
-
-        "Storage Services",
-
-        "Courier Service",
-
-        "Same Day Delivery",
-
-        "Freight Shipping",
-
-        "Logistics Coordinator",
-
-        "Chauffeur Service",
-
-        "Airport Transfer",
+        { name: "Moving Company", service_icon: "📦" },
+        { name: "Local Movers", service_icon: "📦" },
+        { name: "Long Distance Movers", service_icon: "🌍" },
+        { name: "Packing Service", service_icon: "📦" },
+        { name: "Storage Services", service_icon: "🏬" },
+        { name: "Courier Service", service_icon: "📬" },
+        { name: "Same Day Delivery", service_icon: "⚡" },
+        { name: "Freight Shipping", service_icon: "🚢" },
+        { name: "Logistics Coordinator", service_icon: "📋" },
+        { name: "Chauffeur Service", service_icon: "🚘" },
+        { name: "Airport Transfer", service_icon: "✈️" },
       ],
     },
 
     {
       category: "Family & Personal",
-
+      icon: "👨‍👩‍👧",
       services: [
-        "Child Care",
-
-        "Nanny",
-
-        "Babysitter",
-
-        "Elder Care",
-
-        "Senior Companion",
-
-        "Caregiver",
-
-        "Personal Chef",
-
-        "Meal Prep",
-
-        "Personal Shopper",
-
-        "Errand Runner",
-
-        "Concierge Service",
-
-        "Life Organizer",
-
-        "Professional Organizer",
-
-        "Genealogist",
+        { name: "Child Care", service_icon: "👶" },
+        { name: "Nanny", service_icon: "👩" },
+        { name: "Babysitter", service_icon: "👶" },
+        { name: "Elder Care", service_icon: "🧓" },
+        { name: "Senior Companion", service_icon: "🧓" },
+        { name: "Caregiver", service_icon: "❤️" },
+        { name: "Personal Chef", service_icon: "👨‍🍳" },
+        { name: "Meal Prep", service_icon: "🥗" },
+        { name: "Personal Shopper", service_icon: "🛍️" },
+        { name: "Errand Runner", service_icon: "🏃" },
+        { name: "Concierge Service", service_icon: "🛎️" },
+        { name: "Life Organizer", service_icon: "📋" },
+        { name: "Professional Organizer", service_icon: "🗂️" },
+        { name: "Genealogist", service_icon: "📜" },
       ],
     },
 
     {
       category: "Fitness & Sports",
-
+      icon: "🏋️",
       services: [
-        "Personal Trainer",
-
-        "Group Fitness Instructor",
-
-        "CrossFit Coach",
-
-        "Yoga Teacher",
-
-        "Pilates Instructor",
-
-        "Martial Arts Instructor",
-
-        "Swim Instructor",
-
-        "Golf Instructor",
-
-        "Tennis Coach",
-
-        "Soccer Coach",
-
-        "Running Coach",
-
-        "Nutrition Coach",
+        { name: "Personal Trainer", service_icon: "🏋️" },
+        { name: "Group Fitness Instructor", service_icon: "👥" },
+        { name: "CrossFit Coach", service_icon: "🏋️" },
+        { name: "Yoga Teacher", service_icon: "🧘" },
+        { name: "Pilates Instructor", service_icon: "🧘‍♀️" },
+        { name: "Martial Arts Instructor", service_icon: "🥋" },
+        { name: "Swim Instructor", service_icon: "🏊" },
+        { name: "Golf Instructor", service_icon: "⛳" },
+        { name: "Tennis Coach", service_icon: "🎾" },
+        { name: "Soccer Coach", service_icon: "⚽" },
+        { name: "Running Coach", service_icon: "🏃" },
+        { name: "Nutrition Coach", service_icon: "🥗" },
       ],
     },
 
     {
       category: "Real Estate & Property",
-
+      icon: "🏡",
       services: [
-        "Real Estate Agent",
-
-        "Buyer's Agent",
-
-        "Seller's Agent",
-
-        "Property Manager",
-
-        "Home Inspector",
-
-        "Appraiser",
-
-        "Real Estate Photographer",
-
-        "Staging Professional",
-
-        "Mortgage Broker",
-
-        "Title Company",
+        { name: "Real Estate Agent", service_icon: "🏠" },
+        { name: "Buyer's Agent", service_icon: "🔑" },
+        { name: "Seller's Agent", service_icon: "🏠" },
+        { name: "Property Manager", service_icon: "🏢" },
+        { name: "Home Inspector", service_icon: "🔍" },
+        { name: "Appraiser", service_icon: "📊" },
+        { name: "Real Estate Photographer", service_icon: "📸" },
+        { name: "Staging Professional", service_icon: "🛋️" },
+        { name: "Mortgage Broker", service_icon: "💰" },
+        { name: "Title Company", service_icon: "📜" },
       ],
     },
 
     {
       category: "Legal Services",
-
+      icon: "⚖️",
       services: [
-        "Criminal Defense Lawyer",
-
-        "Family Attorney",
-
-        "Divorce Lawyer",
-
-        "Immigration Attorney",
-
-        "Personal Injury Lawyer",
-
-        "Estate Planning Attorney",
-
-        "Business Lawyer",
-
-        "Intellectual Property Attorney",
-
-        "Real Estate Attorney",
-
-        "Bankruptcy Attorney",
-
-        "Employment Lawyer",
+        { name: "Criminal Defense Lawyer", service_icon: "⚖️" },
+        { name: "Family Attorney", service_icon: "👨‍👩‍👧" },
+        { name: "Divorce Lawyer", service_icon: "💔" },
+        { name: "Immigration Attorney", service_icon: "🌍" },
+        { name: "Personal Injury Lawyer", service_icon: "🩹" },
+        { name: "Estate Planning Attorney", service_icon: "📜" },
+        { name: "Business Lawyer", service_icon: "💼" },
+        { name: "Intellectual Property Attorney", service_icon: "📝" },
+        { name: "Real Estate Attorney", service_icon: "🏠" },
+        { name: "Bankruptcy Attorney", service_icon: "💸" },
+        { name: "Employment Lawyer", service_icon: "👔" },
       ],
     },
 
     {
       category: "Financial Services",
-
+      icon: "💰",
       services: [
-        "Financial Planner",
-
-        "Investment Advisor",
-
-        "Tax Consultant",
-
-        "Bookkeeper",
-
-        "CPA",
-
-        "Payroll Specialist",
-
-        "Loan Officer",
-
-        "Mortgage Advisor",
-
-        "Credit Counselor",
-
-        "Debt Relief Specialist",
+        { name: "Financial Planner", service_icon: "📈" },
+        { name: "Investment Advisor", service_icon: "📊" },
+        { name: "Tax Consultant", service_icon: "💼" },
+        { name: "Bookkeeper", service_icon: "📒" },
+        { name: "CPA", service_icon: "📋" },
+        { name: "Payroll Specialist", service_icon: "💵" },
+        { name: "Loan Officer", service_icon: "🏦" },
+        { name: "Mortgage Advisor", service_icon: "🏠" },
+        { name: "Credit Counselor", service_icon: "💳" },
+        { name: "Debt Relief Specialist", service_icon: "💸" },
       ],
     },
   ],
