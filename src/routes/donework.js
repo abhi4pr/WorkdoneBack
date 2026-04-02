@@ -4,8 +4,7 @@ import {
   getCustomerWorks,
   getProviderWorks,
   getWorkDetailsById,
-  updateWorkStatus,
-  updateWorkDetails,
+  updateWork,
 } from "../controllers/doneworkController.js";
 import authMiddleware from "../middlewares/authMiddleware.js";
 
@@ -15,7 +14,6 @@ router.post("/create_work", authMiddleware, createDonework);
 router.get("/get_customer_works/:customerid", authMiddleware, getCustomerWorks);
 router.get("/get_provider_works/:providerid", authMiddleware, getProviderWorks);
 router.get("/get_workdetails/:_id", authMiddleware, getWorkDetailsById);
-router.put("/update_status/:_id", authMiddleware, updateWorkStatus);
-router.put("/update_note/:_id", authMiddleware, updateWorkDetails);
+router.put("/update_work/:_id", authMiddleware, updateWork);
 
 export default router;

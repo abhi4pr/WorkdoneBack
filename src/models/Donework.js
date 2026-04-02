@@ -19,7 +19,14 @@ const doneworkSchema = new mongoose.Schema(
     },
     status: {
       type: String,
-      enum: ["pending", "accepted", "in_progress", "completed", "cancelled"],
+      enum: [
+        "pending",
+        "accepted",
+        "declined",
+        "in_progress",
+        "completed",
+        "cancelled",
+      ],
       required: true,
       default: "pending",
     },

@@ -10,6 +10,7 @@ import {
   getAllDefaultCategories,
   getAllDefaultServicesByCategory,
   seedData,
+  getServicesByDefaultServiceId,
 } from "../controllers/serviceController.js";
 import authMiddleware from "../middlewares/authMiddleware.js";
 
@@ -20,6 +21,11 @@ router.get(
   "/default_services/:categoryid",
   authMiddleware,
   getAllDefaultServicesByCategory,
+);
+router.get(
+  "/services_by_default_service/:defaultserviceid",
+  authMiddleware,
+  getServicesByDefaultServiceId,
 );
 router.post("/create_service", authMiddleware, createService);
 router.get("/get_all_services", authMiddleware, getAllServices);

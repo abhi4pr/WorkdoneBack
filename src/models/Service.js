@@ -7,6 +7,11 @@ const serviceSchema = new mongoose.Schema(
       ref: "User",
       required: true,
     },
+    default_service_id: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Defaultservice",
+      required: false,
+    },
     name: {
       type: String,
       required: true,
@@ -22,6 +27,9 @@ const serviceSchema = new mongoose.Schema(
       type: Number,
       required: true,
       min: 10,
+    },
+    service_logo: {
+      type: String,
     },
     description: {
       type: String,

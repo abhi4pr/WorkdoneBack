@@ -38,6 +38,37 @@ export const getAllDefaultServicesByCategory = async (req, res) => {
   }
 };
 
+export const getServicesByDefaultServiceId = async (req, res) => {
+  try {
+    const { defaultserviceid } = req.params;
+
+    if (!defaultserviceid) {
+      return res.status(400).json({
+        message: "defaultserviceid is required",
+      });
+    }
+
+    const services = await Service.find({
+      default_service_id: defaultserviceid,
+      deleted: false,
+      // status: true,
+    })
+      .populate("created_by", "name surname profile_pic phone")
+      .sort({ createdAt: -1 });
+
+    return res.status(200).json({
+      message: "Services fetched successfully by default service ID",
+      count: services.length,
+      services,
+    });
+  } catch (error) {
+    return res.status(500).json({
+      message: "Failed to fetch services by default service ID",
+      error: error.message,
+    });
+  }
+};
+
 export const createService = async (req, res) => {
   try {
     const {
@@ -49,6 +80,8 @@ export const createService = async (req, res) => {
       duration,
       country_location,
       city_location,
+      service_logo,
+      default_service_id,
     } = req.body;
 
     if (!created_by || !name || !price || !country_location || !city_location) {
@@ -66,6 +99,8 @@ export const createService = async (req, res) => {
       duration,
       country_location,
       city_location,
+      service_logo,
+      default_service_id,
     });
 
     return res.status(201).json({
@@ -244,13 +279,11 @@ export const seedData = async () => {
     for (let i = 0; i < demodata.categories.length; i++) {
       const cat = demodata.categories[i];
 
-      // create category with icon
       const createdCategory = await Defaultcategory.create({
         name: cat.category,
         icon: cat.icon, // NEW
       });
 
-      // map services properly
       const services = [];
 
       for (let j = 0; j < cat.services.length; j++) {

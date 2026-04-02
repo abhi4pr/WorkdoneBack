@@ -109,61 +109,35 @@ export const getWorkDetailsById = async (req, res) => {
   }
 };
 
-export const updateWorkStatus = async (req, res) => {
+export const updateWork = async (req, res) => {
   try {
     const workId = req.params._id;
-    const { status } = req.body;
+    const { status, notes, scheduled_date } = req.body;
 
     const validStatuses = [
       "pending",
       "accepted",
+      "declined",
       "in_progress",
       "completed",
       "cancelled",
     ];
 
-    if (!validStatuses.includes(status)) {
-      return res.status(400).json({
-        message: "Invalid status value",
-      });
-    }
-
-    const updates = { status };
-
-    if (status === "completed") {
-      updates.completed_at = new Date();
-    }
-
-    const updatedWork = await Donework.findByIdAndUpdate(
-      workId,
-      { $set: updates },
-      { new: true },
-    );
-
-    if (!updatedWork) {
-      return res.status(404).json({
-        message: "Work not found",
-      });
-    }
-
-    return res.status(200).json({
-      message: "Work status updated successfully",
-      work: updatedWork,
-    });
-  } catch (error) {
-    return res.status(500).json({
-      message: "Failed to update work status",
-      error: error.message,
-    });
-  }
-};
-
-export const updateWorkDetails = async (req, res) => {
-  try {
-    const workId = req.params._id;
-    const { notes, scheduled_date } = req.body;
-
     const updates = {};
+
+    if (status !== undefined) {
+      if (!validStatuses.includes(status)) {
+        return res.status(400).json({
+          message: "Invalid status value",
+        });
+      }
+
+      updates.status = status;
+
+      if (status === "completed") {
+        updates.completed_at = new Date();
+      }
+    }
 
     if (notes !== undefined) updates.notes = notes;
     if (scheduled_date !== undefined) updates.scheduled_date = scheduled_date;

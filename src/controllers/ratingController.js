@@ -61,7 +61,7 @@ export const createRating = async (req, res) => {
 
 export const getRatingsForUser = async (req, res) => {
   try {
-    const userId = req.params.providerId;
+    const userId = req.params.providerid;
 
     const ratings = await Rating.find({ provider: userId })
       .populate("customer", "name surname profile_pic")
@@ -79,9 +79,53 @@ export const getRatingsForUser = async (req, res) => {
   }
 };
 
+export const getRatingByDoneworkId = async (req, res) => {
+  try {
+    const { doneworkid } = req.params;
+
+    if (!doneworkid) {
+      return res.status(400).json({
+        message: "doneworkId is required",
+      });
+    }
+
+    const donework = await Donework.findById(doneworkid)
+      .select("rewrating")
+      .populate({
+        path: "rewrating",
+        populate: {
+          path: "customer",
+          select: "name surname profile_pic",
+        },
+      });
+
+    if (!donework) {
+      return res.status(404).json({
+        message: "Donework not found",
+      });
+    }
+
+    if (!donework.rewrating) {
+      return res.status(404).json({
+        message: "No rating found for this work",
+      });
+    }
+
+    return res.status(200).json({
+      message: "Rating fetched successfully",
+      rating: donework.rewrating,
+    });
+  } catch (error) {
+    return res.status(500).json({
+      message: "Failed to fetch rating by doneworkId",
+      error: error.message,
+    });
+  }
+};
+
 export const getAverageRating = async (req, res) => {
   try {
-    const userId = req.params.providerId;
+    const userId = req.params.providerid;
 
     const result = await Rating.aggregate([
       { $match: { provider: new mongoose.Types.ObjectId(userId) } },
