@@ -173,7 +173,7 @@ export const forgotPassword = async (req, res) => {
       expiresIn: "15m",
     });
 
-    const resetLink = `${process.env.FRONTEND_URL}/passwordreset?token=${resetToken}`;
+    const resetLink = `${process.env.FRONTEND_URL}/passwordreset.html?token=${resetToken}`;
 
     const html = `
       <p>Hello ${user.name},</p>
