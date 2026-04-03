@@ -1,5 +1,5 @@
-import Rating from "../models/Rating.js";
 import Donework from "../models/Donework.js";
+import Rating from "../models/Rating.js";
 
 export const createRating = async (req, res) => {
   try {
@@ -74,6 +74,42 @@ export const getRatingsForUser = async (req, res) => {
   } catch (error) {
     return res.status(500).json({
       message: "Failed to fetch ratings",
+      error: error.message,
+    });
+  }
+};
+
+export const getRatingsForService = async (req, res) => {
+  try {
+    const { serviceid } = req.params;
+
+    if (!serviceid) {
+      return res.status(400).json({
+        message: "serviceId is required",
+      });
+    }
+
+    const ratings = await Rating.find({ service: serviceid })
+      .populate("customer", "name surname profile_pic")
+      .populate("provider", "name surname profile_pic") // optional: show provider info too
+      .sort({ createdAt: -1 });
+
+    if (ratings.length === 0) {
+      return res.status(200).json({
+        message: "No ratings found for this service",
+        ratings: [],
+        totalRatings: 0,
+      });
+    }
+
+    return res.status(200).json({
+      message: "Ratings fetched successfully for this service",
+      ratings,
+      totalRatings: ratings.length,
+    });
+  } catch (error) {
+    return res.status(500).json({
+      message: "Failed to fetch ratings for service",
       error: error.message,
     });
   }
